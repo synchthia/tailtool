@@ -2,15 +2,12 @@ module github.com/synchthia/tailtool
 
 go 1.20
 
-replace github.com/synchthia/systera-api => ../systera-api
-
 require (
 	github.com/k0kubun/pp v3.0.1+incompatible
 	github.com/sirupsen/logrus v1.9.2
 	github.com/spf13/cobra v1.7.0
 	github.com/spf13/viper v1.15.0
 	github.com/synchthia/nebula-api v0.0.0-20230507031114-b2e2aeb0c175
-	github.com/synchthia/systera-api v0.0.0-20200417121858-0a94eed29029
 	github.com/x-cray/logrus-prefixed-formatter v0.5.2
 	google.golang.org/grpc v1.55.0
 )
@@ -33,6 +30,7 @@ require (
 	github.com/spf13/jwalterweatherman v1.1.0 // indirect
 	github.com/spf13/pflag v1.0.5 // indirect
 	github.com/subosito/gotenv v1.4.2 // indirect
+	github.com/synchthia/systera-api v0.0.0-20240713071356-f966fb7cb57e // indirect
 	golang.org/x/crypto v0.9.0 // indirect
 	golang.org/x/net v0.10.0 // indirect
 	golang.org/x/sys v0.8.0 // indirect

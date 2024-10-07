@@ -925,6 +925,8 @@ github.com/synchthia/nebula-api v0.0.0-20230507031114-b2e2aeb0c175 h1:CiwGwu+vxv
 github.com/synchthia/nebula-api v0.0.0-20230507031114-b2e2aeb0c175/go.mod h1:DNGymZ/Gt0jgWlb6An+z9JHxkl2miZMj9qCEYvBG4kk=
 github.com/synchthia/systera-api v0.0.0-20200417121858-0a94eed29029 h1:5fFcFyVfr9X19ojgFoi0VM/aQy6AHWrZy5yT9cyPF3M=
 github.com/synchthia/systera-api v0.0.0-20200417121858-0a94eed29029/go.mod h1:R3D3uf2BCN0QYhzf6FiDMStq2oskdFuTdwkmXzYu3io=
+github.com/synchthia/systera-api v0.0.0-20240713071356-f966fb7cb57e h1:G4rLGzwL1VvkKKSQ7I30V0zg5hIPdfGGXsWc58nqqZk=
+github.com/synchthia/systera-api v0.0.0-20240713071356-f966fb7cb57e/go.mod h1:bhSWQSZ6ChFbI1iyNh5z84EIjzWfZxH8zGo5GP8Q02U=
 github.com/x-cray/logrus-prefixed-formatter v0.5.2 h1:00txxvfBM9muc0jiLIEAkAcIMJzfthRT6usrui8uGmg=
 github.com/x-cray/logrus-prefixed-formatter v0.5.2/go.mod h1:2duySbKsL6M18s5GU7VPsoEPHyzalCE06qoARUCeBBE=
 github.com/yuin/goldmark v1.1.25/go.mod h1:3hX8gzYuyVAZsxl0MRgGTJEmQBFcNTphYh9decYSb74=
