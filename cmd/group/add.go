@@ -6,6 +6,7 @@ import (
 
 	"github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
+	"github.com/synchthia/systera-api/systerapb"
 	"github.com/synchthia/tailtool/systera"
 )
 
@@ -20,7 +21,10 @@ func add() *cobra.Command {
 			systera.NewClient()
 			defer systera.Shutdown()
 
-			err := systera.CreateGroup(name, prefix)
+			err := systera.CreateGroup(&systerapb.GroupEntry{
+                GroupName: name,
+                GroupPrefix: prefix,
+            })
 			if err != nil {
 				logrus.WithError(err).Errorln("Failed create group")
 				os.Exit(1)

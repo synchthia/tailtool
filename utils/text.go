@@ -36,3 +36,9 @@ func ColorText(orig string) string {
 
 	return converted
 }
+
+//func MiniMessage(orig string) string {
+//    converted := orig + "\x1b[0m]"
+//
+//    strings.ReplaceAll()
+//}

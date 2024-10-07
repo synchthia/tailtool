@@ -1,0 +1,32 @@
+{
+  "groups": [
+    {
+      "group_name": "default",
+      "permissions": [
+        {
+          "server_name": "global",
+          "permissions": [
+            "nebula.command.server",
+            "nebula.command.servers",
+            "systera.command.ignore",
+            "systera.command.list",
+            "systera.command.report",
+            "systera.command.seen",
+            "systera.command.settings",
+            "systera.command.tell"
+          ]
+        }
+      ]
+    },
+    {
+      "group_name": "admin",
+      "group_prefix": "&c&l[Admin]&r",
+      "permissions": [
+        {
+          "server_name": "global",
+          "permissions": ["systera.op"]
+        }
+      ]
+    }
+  ]
+}

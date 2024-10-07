@@ -56,18 +56,18 @@ func Announce(target, message string) error {
 // Player
 // ----------------
 func InitPlayerProfile() (*systerapb.PlayerEntry, error) {
-    r, err := client.InitPlayerProfile(context.Background(), &systerapb.InitPlayerProfileRequest{
-        //Uuid: "b0fd81269557433a9dfca68afcfb9e88",
-        //Name: "Lunasys",
-        Uuid: "dummy-uuid",
-        Name: "dummyname",
-        IpAddress: "1.1.1.1",
-        Hostname: "unknown",
-    })
-    if r == nil {
-        return nil, err
-    }
-    return r.Entry, err
+	r, err := client.InitPlayerProfile(context.Background(), &systerapb.InitPlayerProfileRequest{
+		//Uuid: "b0fd81269557433a9dfca68afcfb9e88",
+		//Name: "Lunasys",
+		Uuid:      "dummy-uuid",
+		Name:      "dummyname",
+		IpAddress: "1.1.1.1",
+		Hostname:  "unknown",
+	})
+	if r == nil {
+		return nil, err
+	}
+	return r.Entry, err
 }
 
 // GetProfile - GetProfile UUID or String
@@ -139,10 +139,8 @@ func AltLookup(playerUUID string) ([]*systerapb.AltLookupEntry, error) {
 // ----------------
 
 // GetGroups - get groups
-func GetGroups(server string) (*systerapb.FetchGroupsResponse, error) {
-	r, err := client.FetchGroups(context.Background(), &systerapb.FetchGroupsRequest{
-		ServerName: server,
-	})
+func GetGroups() (*systerapb.FetchGroupsResponse, error) {
+	r, err := client.FetchGroups(context.Background(), &systerapb.FetchGroupsRequest{})
 	return r, err
 }
 
@@ -156,10 +154,9 @@ func SetGroup(playerUUID string, groups []string) error {
 }
 
 // CreateGroup - create group
-func CreateGroup(name, prefix string) error {
+func CreateGroup(entry *systerapb.GroupEntry) error {
 	_, err := client.CreateGroup(context.Background(), &systerapb.CreateGroupRequest{
-		GroupName:   name,
-		GroupPrefix: prefix,
+		GroupEntry: entry,
 	})
 	return err
 }
@@ -168,6 +165,14 @@ func CreateGroup(name, prefix string) error {
 func RemoveGroup(name string) error {
 	_, err := client.RemoveGroup(context.Background(), &systerapb.RemoveGroupRequest{
 		GroupName: name,
+	})
+	return err
+}
+
+// UpdateGroup - update group
+func UpdateGroup(entry *systerapb.GroupEntry) error {
+	_, err := client.UpdateGroup(context.Background(), &systerapb.UpdateGroupRequest{
+		GroupEntry: entry,
 	})
 	return err
 }

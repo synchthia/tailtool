@@ -10,5 +10,6 @@ var rootCmd = &cobra.Command{
 func New() *cobra.Command {
 	rootCmd.AddCommand(announce())
 	rootCmd.AddCommand(dispatch())
+    rootCmd.AddCommand(iplookup())
 	return rootCmd
 }

@@ -11,7 +11,9 @@ var rootCmd = &cobra.Command{
 }
 
 func New() *cobra.Command {
-    rootCmd.AddCommand(add())
-    rootCmd.AddCommand(list())
+	rootCmd.AddCommand(add())
+	rootCmd.AddCommand(list())
+	rootCmd.AddCommand(remove())
+    rootCmd.AddCommand(apply())
 	return rootCmd
 }

@@ -13,5 +13,6 @@ var rootCmd = &cobra.Command{
 func New() *cobra.Command {
     //rootCmd.AddCommand(cmdInit())
     rootCmd.AddCommand(fetch())
+    rootCmd.AddCommand(setGroup())
 	return rootCmd
 }
